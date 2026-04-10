@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaEnvelo
 export default function Footer() {
     return (
         <div>
-            <div className="w-full  mt-40 py-16 px-6 md:px-20 bg-cover" style={{ backgroundImage: "url('/src/assets/13.jpg')" }}>
+            <div className="w-full  mt-40 py-16 px-6 md:px-20 bg-cover" style={{ backgroundImage: "url('src/assets/13.jpg')" }}>
                 <div className="grid md:grid-cols-2 gap-10 px-20">
 
                     {/* Left Section */}
