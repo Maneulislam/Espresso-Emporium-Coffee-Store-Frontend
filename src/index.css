@@ -1,0 +1,15 @@
+/* Background pattern similar to Espresso Emporium */
+.bg-coffee-pattern {
+    background-color: #ffffff;
+    background-image: url("https://i.ibb.co/7y1gC0L/coffee-bg.png");
+    background-repeat: repeat;
+}
+
+/* Custom colors */
+.text-coffee-dark {
+    color: #331a15;
+}
+
+.bg-coffee-btn {
+    background-color: #d2b48c;
+}
