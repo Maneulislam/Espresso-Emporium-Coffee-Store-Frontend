@@ -1,9 +1,10 @@
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import bgImage from '../assets/13.jpg';
 
 export default function Footer() {
     return (
         <div>
-            <div className="w-full  mt-40 py-16 px-6 md:px-20 bg-cover" style={{ backgroundImage: "url('src/assets/13.jpg')" }}>
+            <div className="w-full  mt-40 py-16 px-6 md:px-20 bg-cover" style={{ backgroundImage: `url(${bgImage})`, }}>
                 <div className="grid md:grid-cols-2 gap-10 px-20">
 
                     {/* Left Section */}
@@ -79,6 +80,8 @@ export default function Footer() {
                         </form>
                     </div>
                 </div>
+
+
 
             </div>
             {/* Footer */}

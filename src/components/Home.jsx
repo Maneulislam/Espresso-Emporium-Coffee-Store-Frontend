@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router';
 import CoffeeCard from './CoffeeCard';
+import bgImage from '../assets/3.png';
 
 const Home = () => {
 
@@ -17,9 +18,11 @@ const Home = () => {
             <div
                 className="relative h-[500px] bg-cover bg-center flex items-center"
                 style={{
-                    backgroundImage: "url('src/assets/3.png')",
+                    backgroundImage: `url(${bgImage})`,
                 }}
             >
+
+
 
 
                 <div className="absolute inset-0 "></div>
