@@ -9,6 +9,8 @@ const Home = () => {
     const [coffees, setCoffees] = useState(initialCoffees);
     console.log(initialCoffees);
 
+    const showImage = false;
+
     return (
         <div>
 
@@ -17,7 +19,7 @@ const Home = () => {
             <div
                 className="relative h-[500px] bg-cover bg-center flex items-center"
                 style={{
-                    backgroundImage: "url('/src/assets/3.png')"
+                    backgroundImage: showImage ? "url('/src/assets/3.png')" : "none"
                 }}
             >
                 <div className="absolute inset-0 "></div>
