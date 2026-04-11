@@ -37,9 +37,7 @@ const Home = () => {
                         moments and make them memorable.
                     </p>
 
-                    <button className="bg-[#d6a26e] text-black px-5 py-2 rounded hover:bg-[#c8925d] transition">
-                        Learn More
-                    </button>
+
                 </div>
             </div>
 
