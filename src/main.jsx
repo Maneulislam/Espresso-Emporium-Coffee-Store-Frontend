@@ -18,12 +18,12 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch('http://localhost:3000/coffees'),
+        loader: () => fetch('https://espresso-emporium-coffee-store-back-six.vercel.app/coffees'),
         Component: Home
       },
       {
         path: "coffee/:id",
-        loader: ({ params }) => fetch(`http://localhost:3000/coffees/${params.id}`),
+        loader: ({ params }) => fetch(`https://espresso-emporium-coffee-store-back-six.vercel.app/coffees/${params.id}`),
         Component: CoffeeDetails
       },
       {
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "updatecoffee/:id",
-        loader: ({ params }) => fetch(`http://localhost:3000/coffees/${params.id}`),
+        loader: ({ params }) => fetch(`https://espresso-emporium-coffee-store-back-six.vercel.app/coffees/${params.id}`),
         Component: UpdateCoffee
       }
     ]
