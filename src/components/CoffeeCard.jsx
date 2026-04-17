@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
+import { FaEye, FaEdit, FaTrash } from "react-icons/fa";
 
 const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
 
@@ -46,27 +47,54 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
     }
 
     return (
-        <div className='max-w-9/12 mx-auto  '>
-            <div className="card card-side  shadow-sm bg-gray-100 w-xl  items-center pr-7 ">
-                <div>
+        <div className="max-w-5xl  mx-auto px-4 py-4">
+            <div className="card card-side bg-gray-100 py-5 pr-9 pl-5 border-gray-100 hover:shadow-2xl items-center  overflow-hidden">
+
+                {/* Product Image */}
+                <figure className="w-1/3 h-48">
                     <img
                         src={photo}
-                        alt="" />
-                </div>
-                <div className="card-body">
-                    <h2 className="card-title">{name}</h2>
-                    <p>Price: {price}</p>
-                    <p>Supplier: {supplier}</p>
+                        alt={name}
+                        className="w-full h-full object-cover"
+                    />
+                </figure>
 
+                {/* Card Details */}
+                <div className="card-body ">
+                    <h2 className="card-title text-2xl font-bold text-gray-800">{name}</h2>
+                    <div className="space-y-1 text-gray-600">
+                        <p><span className="font-semibold text-gray-800">Price:</span> ${price}</p>
+                        <p><span className="font-semibold text-gray-800">Supplier:</span> {supplier}</p>
+                    </div>
                 </div>
-                <div className="join join-vertical space-y-4">
+
+                {/* Action Sidebar */}
+                <div className="flex flex-col gap-3">
                     <Link to={`/coffee/${_id}`}>
-                        <button className="btn join-item ">View</button>
+                        <button
+                            className="btn btn-circle btn-ghost bg-orange-100 text-orange-600 hover:bg-orange-600 hover:text-white border-none shadow-sm"
+                            title="View Details"
+                        >
+                            <FaEye size={18} />
+                        </button>
                     </Link>
+
                     <Link to={`/updatecoffee/${_id}`}>
-                        <button className="btn join-item">Edit</button>
+                        <button
+                            className="btn btn-circle btn-ghost bg-slate-100 text-slate-700 hover:bg-slate-800 hover:text-white border-none shadow-sm"
+                            title="Edit Coffee"
+                        >
+                            <FaEdit size={18} />
+                        </button>
                     </Link>
-                    <button onClick={() => handleDelete(_id)} className="btn join-item">Delete</button>
+
+                    <button
+                        onClick={() => handleDelete(_id)}
+                        className="btn btn-circle btn-ghost bg-red-100 text-red-600 hover:bg-red-600 hover:text-white border-none shadow-sm"
+                        title="Delete"
+                    >
+                        <FaTrash size={18} />
+                    </button>
                 </div>
             </div>
         </div>

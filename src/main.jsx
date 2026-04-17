@@ -9,6 +9,8 @@ import Home from './components/Home.jsx';
 import AddCoffee from './components/AddCoffee.jsx';
 import CoffeeDetails from './components/CoffeeDetails.jsx';
 import UpdateCoffee from './components/UpdateCoffee.jsx';
+import LearnMore from './components/LearnMore.jsx';
+import AllCoffees from './components/AllCoffees.jsx';
 
 
 const router = createBrowserRouter([
@@ -34,7 +36,16 @@ const router = createBrowserRouter([
         path: "updatecoffee/:id",
         loader: ({ params }) => fetch(`https://espresso-emporium-coffee-store-back-six.vercel.app/coffees/${params.id}`),
         Component: UpdateCoffee
-      }
+      },
+      {
+        path: "learnmore",
+        Component: LearnMore
+      },
+      {
+        path: "allcoffees",
+        loader: () => fetch('https://espresso-emporium-coffee-store-back-six.vercel.app/coffees'),
+        Component: AllCoffees
+      },
     ]
   },
 ]);
