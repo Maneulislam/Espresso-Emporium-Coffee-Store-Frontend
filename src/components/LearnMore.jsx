@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router';
+import coffeeImage from '../assets/3.png';
 
 
 const LearnMore = () => {
@@ -10,8 +11,8 @@ const LearnMore = () => {
 
             <figure className="px-10 pt-10">
                 <img
-                    src={"/src/assets/3.png"}
-                    alt="Shoes"
+                    src={coffeeImage} // 2. Use the imported variable here
+                    alt="Delicious Coffee"
                     className="rounded-xl" />
             </figure>
 
